@@ -42,7 +42,7 @@ MockedObject mockedObject = Mockito.mock(MockedObject.class);
   
   其实这点区别是可以从代码层面上看出来的，spy的时候先拿到了一个对象，然后对对象进行spy，而mock的时候使用的则是字节码。  
 - 两者之间的效果也可以互相转化  
-    spy类型的可以通过```doReturn()```，使得代码不被执行，mock类型可以通过```doRealCallMethod()```,使得代码被执行，所以spy和mock的界限其实并不清晰
+    spy类型的可以通过 ``` doReturn() ``` ，使得代码不被执行，mock类型可以通过 ``` doRealCallMethod() ``` ,使得代码被执行，所以spy和mock的界限其实并不清晰
 - 代码示例  
   被mock和spy的类 
 
@@ -71,7 +71,9 @@ class TestMock{
     }
 }
 ```
+
   参数类（在上面的类中的某些方法的参数）   
+
 ```
 class MockParam{
 
@@ -93,8 +95,10 @@ class MockParam{
     }
 }
 ```
+
   mock样例  
-  //所有方法的返回都是方法的默认类型，方法内的代码不会被执行
+  所有方法的返回都是方法的默认类型，方法内的代码不会被执行
+
 ```
 public void test2() {
 
@@ -114,8 +118,10 @@ public void test2() {
 }
 
 ```
+  
   spy样例  
-  //所有方法的代码都会被执行，并正常返回  
+  所有方法的代码都会被执行，并正常返回  
+
 ```
 public void test3() {
 
@@ -134,6 +140,7 @@ public void test3() {
   
 #### 参数匹配 
 - 通常情况下，参数匹配使用的equals方法  
+
 ```
  @Test
 public void test4() {
@@ -160,7 +167,9 @@ public void test5() {
 
 }
 ```
+
 - 内置参数匹配(常用)  
+
 ```
 @Test
 public void test6() {
@@ -182,8 +191,10 @@ public void test6() {
     System.out.println(mock.t2("bbb"));//return dddd
 }
 ```
+
 - 注意
 ⚠ :如果有一个参数使用了参数匹配器，那所有参数都得使用参数匹配器
+
 ```
 @Test
 public void test7() {
@@ -200,6 +211,7 @@ public void test7() {
 ```
 
 - 自定义参数匹配器，先实现参数匹配器的接口，根据需要在matches里返回true or false  
+
 ```
 //定义参数匹配器
 class MockParamArgMatcher implements ArgumentMatcher<MockParam> {
@@ -231,6 +243,7 @@ public void test9() {
 ```
 
 - 附加参数匹配器(参数验证)   
+
 ```
 @Test
 public void test8() {
@@ -247,7 +260,9 @@ public void test8() {
     System.out.println(mock.t5(mockParam , "6667"));
 }
 ```
+
 - 官网推荐的参数验证方式（很好用，使用这个差不多就可以取代断点调试了）
+
 ```
 @Test
 public void test10() {
@@ -276,6 +291,7 @@ public void test10() {
 
 #### 其他常规套路
 - 验证调用方法的次数  
+
 ```
 @Test
 public void test11() {
@@ -297,7 +313,9 @@ public void test11() {
 
 }
 ```
+
 - 验证方法执行的顺序  
+
 ```
 @Test
 public void test14() {
@@ -314,7 +332,9 @@ public void test14() {
 
 }
 ```
+
 - doReturn  
+
 ```
  @Test
 public void test16() {
@@ -328,6 +348,7 @@ public void test16() {
 }
 
 ```
+
 ---
 
     
