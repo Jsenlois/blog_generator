@@ -5889,3 +5889,5 @@
 {"name":"hexo","hostname":"luoyuzhideMacBook-Pro.local","pid":12944,"level":40,"msg":"===============================================================","time":"2020-03-18T07:38:20.235Z","v":0}
 {"name":"hexo","hostname":"luoyuzhideMacBook-Pro.local","pid":12944,"level":40,"msg":" It's rebase to v6.0.0 and future maintenance will resume there","time":"2020-03-18T07:38:20.235Z","v":0}
 {"name":"hexo","hostname":"luoyuzhideMacBook-Pro.local","pid":12944,"level":40,"msg":"===============================================================","time":"2020-03-18T07:38:20.235Z","v":0}
+{"name":"hexo","hostname":"luoyuzhideMacBook-Pro.local","pid":12944,"level":30,"msg":"Bye!","time":"2020-03-18T07:39:25.892Z","v":0}
+{"name":"hexo","hostname":"luoyuzhideMacBook-Pro.local","pid":12944,"level":20,"msg":"Database saved","time":"2020-03-18T07:39:25.917Z","v":0}
