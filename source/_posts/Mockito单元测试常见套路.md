@@ -1,5 +1,6 @@
 ---
 title: Mockito单元测试
+categories: Java
 tags: 测试
 date: 2017-10-07 13:14:07
 comments: true
@@ -12,6 +13,7 @@ comments: true
 - 发现问题的成本最低
 - 调教你的编程习惯
 - 保证代码质量
+<!-- more -->
 ### 优点
 - 语法简洁，使用简单，易上手
 - 比较有测试的思维（无法随意Mock）
