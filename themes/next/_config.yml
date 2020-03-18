@@ -93,7 +93,7 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  #about: /about || user
+  about: /about || user
   categories: /categories/ || th
   tags: /tags || tags
   archives: /archives/ || archive
@@ -126,9 +126,9 @@ scheme: Gemini
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-GitHub: https://github.com/Jsenlois || github
-E-Mail: mailto:799699730@qq.com || envelope
+social:
+  GitHub: https://github.com/Jsenlois || github
+  E-Mail: mailto:799699730@qq.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
