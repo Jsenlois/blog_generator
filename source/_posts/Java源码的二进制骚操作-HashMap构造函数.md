@@ -5,10 +5,10 @@ categories: Java
 tags: 源码分析
 ---
 ## Java 源码的二进制骚操作-HashMap构造函数
-1. 问题：指定capacity构造hashmap，为什么经过一连串的移位跟或运算就能得到2的n次幂
-2. 目标：为了找到大于等于A的，最小的，2的n次幂
-3. 思路：
-<!--more-->>
+#### 1. 问题：指定capacity构造hashmap，为什么经过一连串的移位跟或运算就能得到2的n次幂
+#### 2. 目标：为了找到大于等于A的，最小的，2的n次幂
+#### 3. 思路：
+<!--more-->
 ```
 比如为了找到大于等于10的，最小的，2的n次幂16
 对于一个数A将其转化为一串二进制，如10，16
@@ -22,7 +22,7 @@ tags: 源码分析
 3、再+1
 00000000 00000000 00000000 00010000
 ```
-4. 源码分析，源码位置：HashMap.tableSizeFor方法
+#### 4. 源码，源码位置：HashMap.tableSizeFor方法
 ```
 static final int tableSizeFor(int cap) {
   int n = cap - 1;
@@ -34,6 +34,7 @@ static final int tableSizeFor(int cap) {
   return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
 }
 ```
+#### 5. 分析
 ```
 源码里面，一上来就减1，然后各种位移运算，接着就返回了。。。
 无妨，待我细细讲来
@@ -99,4 +100,4 @@ n的二进制为 00000000 00000000 00000000 00001（最高位为1）001
 //最后再做一些兼容运算
 7、  return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
 ```
-5. 位操作是最适合计算机的，但读起来真的是反人类啊
+#### 6. 位操作是最适合计算机的，但读起来真的是反人类啊
